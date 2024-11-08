@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 100%;
+        margin: 0 auto;
+        
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #70d9b8;
+        color: black;
+      }
+      header h1 {
+        margin: 0;
+      }
+      .buttons,
+      .dropdown {
+        display: flex;
+        gap: 10px;
+      }
+      .content {
+        margin-top: 20px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        padding: 10px;
+        background-color: #f4f4f4;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+      #login-btn{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Dashboard</h1>
+        <div class="dropdown">
+          <label for="sort">Sort by:</label>
+          <select id="sort">
+            <option value="name">Name</option>
+          </select>
+        </div>
+      </header>
+
+      </div>
+
+      <div class="content">
+        <br>
+        <br>
+        <p>Top 10 GIT users are as follows:</p>
+
+        <ul id="item-list">
+         
+        </ul>
+      </div>
+    </div>
+
+    <button id="login-btn">logout</button>
+
+    <script>
+      document.getElementById("sort").addEventListener("change", function () {
+        console.log("Sorting by:", this.value);
+      });
+    </script>
+  </body>
+</html>
